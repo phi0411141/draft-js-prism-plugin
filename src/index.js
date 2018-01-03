@@ -18,10 +18,12 @@ const prismPlugin = (options: Options) => {
         prism: prism,
         getSyntax(block) {
           const language = block.getData().get('language');
-          if (typeof prism.languages[language] === 'object') {
-            return language;
-          }
-          return null;
+          //return ve javascript cmnl
+          return 'javascript';
+//           if (typeof prism.languages[language] === 'object') {
+//             return language;
+//           }
+//           return null;
         },
         render({ type, children }) {
           return (
